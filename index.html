@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gender Labels in the News</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/d3-scale-cluster@1.3.1/dist/d3-scale-cluster.min.js"></script>
+    <script src="d3code.js"></script>
+  </head>
+
+  <body onload="getData('work')" class="is-boxed has-animations">
+    <div class="body-wrap">
+      <header class="site-header">
+        <div class="container">
+          <div class="site-header-inner">
+            <div class="brand header-brand">
+              <h1 class="m-0">
+                <a href="#">
+                  <svg>
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 161.8 46"
+                      style="enable-background:new 0 0 161.8 46;"
+                      xml:space="preserve"
+                    >
+                      <style type="text/css">
+                        .st0 {
+                          fill: #313644;
+                        }
+                        .st1 {
+                          fill: #bcd8ea;
+                        }
+                        .st2 {
+                          fill: #f6bdac;
+                        }
+                      </style>
+                      <g>
+                        <g>
+                          <path
+                            class="st0"
+                            d="M1,17.4h2.6c0.3,0,0.5,0.1,0.6,0.2s0.3,0.3,0.3,0.4l2,7.4c0.1,0.4,0.2,0.8,0.3,1.2C6.9,27,6.9,27.4,7,27.8
+									c0.1-0.4,0.2-0.8,0.3-1.2c0.1-0.4,0.2-0.8,0.4-1.2L10,18c0.1-0.2,0.2-0.3,0.3-0.4s0.3-0.2,0.6-0.2h1.5c0.2,0,0.4,0.1,0.6,0.2
+									s0.3,0.3,0.3,0.4l2.3,7.5c0.1,0.4,0.2,0.8,0.3,1.1c0.1,0.4,0.2,0.7,0.3,1.1c0.1-0.4,0.1-0.8,0.2-1.2c0.1-0.4,0.2-0.8,0.3-1.2
+									l2-7.4c0-0.2,0.2-0.3,0.3-0.4s0.4-0.2,0.6-0.2h2.5l-4.4,13.8H15c-0.3,0-0.5-0.2-0.6-0.6l-2.5-8c-0.1-0.3-0.2-0.5-0.2-0.8
+									c-0.1-0.3-0.1-0.5-0.2-0.8c-0.1,0.3-0.1,0.5-0.2,0.8c-0.1,0.3-0.1,0.5-0.2,0.8l-2.5,8.1c-0.1,0.4-0.4,0.6-0.7,0.6H5.4L1,17.4z"
+                          />
+                          <path
+                            class="st0"
+                            d="M37.4,31.2V17.4h1.9c0.3,0,0.6,0.1,0.7,0.2s0.2,0.3,0.3,0.6l0.2,1.7c0.5-0.9,1.1-1.5,1.7-2
+									c0.7-0.5,1.4-0.7,2.2-0.7c0.7,0,1.2,0.2,1.7,0.5l-0.4,2.5c0,0.2-0.1,0.3-0.2,0.3c-0.1,0.1-0.2,0.1-0.4,0.1c-0.1,0-0.3,0-0.5-0.1
+									s-0.5-0.1-0.9-0.1c-0.7,0-1.3,0.2-1.8,0.6s-0.9,0.9-1.2,1.7v8.6h-3.3V31.2z"
+                          />
+                          <path
+                            class="st0"
+                            d="M72.1,20.1c-0.1,0.1-0.2,0.2-0.3,0.3c-0.1,0.1-0.2,0.1-0.4,0.1c-0.2,0-0.3,0-0.5-0.1s-0.4-0.2-0.6-0.3
+									s-0.5-0.2-0.8-0.3s-0.7-0.1-1.1-0.1c-0.7,0-1.2,0.1-1.5,0.4c-0.4,0.3-0.6,0.6-0.6,1.1c0,0.3,0.1,0.5,0.3,0.7s0.4,0.4,0.8,0.5
+									c0.3,0.2,0.7,0.3,1.1,0.4s0.8,0.3,1.2,0.4c0.4,0.1,0.8,0.3,1.2,0.5c0.4,0.2,0.8,0.4,1.1,0.7s0.6,0.6,0.8,1s0.3,0.9,0.3,1.4
+									c0,0.7-0.1,1.3-0.4,1.8c-0.2,0.6-0.6,1-1.1,1.4s-1,0.7-1.7,1c-0.7,0.2-1.5,0.3-2.4,0.3c-0.5,0-0.9,0-1.4-0.1s-0.9-0.2-1.3-0.4
+									c-0.4-0.2-0.8-0.3-1.2-0.5c-0.4-0.2-0.7-0.4-0.9-0.7l0.8-1.3c0.1-0.2,0.2-0.3,0.3-0.3c0.1-0.1,0.3-0.1,0.5-0.1s0.4,0.1,0.6,0.2
+									s0.4,0.2,0.6,0.4c0.2,0.1,0.5,0.3,0.9,0.4c0.3,0.1,0.7,0.2,1.2,0.2c0.4,0,0.7,0,1-0.1s0.5-0.2,0.7-0.4s0.3-0.3,0.4-0.5
+									s0.1-0.4,0.1-0.6c0-0.3-0.1-0.6-0.3-0.8c-0.2-0.2-0.4-0.4-0.8-0.5s-0.7-0.3-1.1-0.4s-0.8-0.3-1.2-0.4c-0.4-0.1-0.8-0.3-1.2-0.5
+									c-0.4-0.2-0.8-0.4-1.1-0.7c-0.3-0.3-0.6-0.7-0.8-1.1c-0.2-0.4-0.3-0.9-0.3-1.6c0-0.6,0.1-1.1,0.3-1.6s0.6-1,1-1.3
+									c0.4-0.4,1-0.7,1.6-0.9c0.6-0.2,1.4-0.3,2.2-0.3c0.9,0,1.8,0.2,2.6,0.5s1.4,0.7,1.9,1.2L72.1,20.1z"
+                          />
+                        </g>
+                        <rect
+                          x="57.5"
+                          y="11.5"
+                          class="st0"
+                          width="3"
+                          height="19.4"
+                        />
+                        <ellipse
+                          class="st1"
+                          cx="28.7"
+                          cy="24.5"
+                          rx="6.8"
+                          ry="7.1"
+                        />
+                        <ellipse
+                          class="st2"
+                          cx="53"
+                          cy="24.5"
+                          rx="6.8"
+                          ry="7.1"
+                        />
+                      </g>
+                    </svg>
+                  </svg>
+                </a>
+              </h1>
+            </div>
+            <ul class="header-links list-reset m-0">
+              <li>
+                <a
+                  class="button-secondary button-shadow"
+                  href="http://www.garrettvercoe.com"
+                  target="_blank"
+                  >My Portfolio</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="text-left">
+          <div class="container-sm">
+            <div class="hero-inner">
+              <h1 class="hero-title h2-mobile mt-0 is-revealing">
+                Envision a nurse. <br />
+                Now envision a welder.
+                <p class="hero-sub">Was there any change in gender?</p>
+              </h1>
+
+              <p class="hero-paragraph is-revealing">
+                Words have many biases embedded into them based on the way we
+                use them every day. U.S. adults spend more than half their day
+                consuming media, and it’s paramount we recognize what gender
+                labels are being perpetuated in the news and the internet. This
+                visualization looks at 3 billion words used in English news
+                articles shared through Google News in 2019, and plots how close
+                each word is associated with the male or female gender.
+              </p>
+              <p class="hero-cta is-revealing"></p>
+            </div>
+          </div>
+          <section></section>
+          <div class="container">
+            <div class="vis-holder">
+              <div id="options">
+                <p class="select-desc">Show graph:</p>
+                <script>
+                  function newChart(category) {
+                    d3.selectAll(" svg#vis > *").remove();
+                    getData(category);
+                  }
+
+                  var generated = [
+                    "work",
+                    "personality",
+                    "health",
+                    "love",
+                    "success",
+                    "hobby",
+                    "violence",
+                    "leadership",
+                    "education",
+                    "food",
+                    "religion",
+                    "sports",
+                    "smart",
+                    "politics",
+                    "emotion",
+                    "social",
+                    "talk"
+                  ];
+
+                  var select = d3
+                    .select("#options")
+                    .append("select")
+                    .attr("class", "select")
+                    .on("change", onchange);
+
+                  var options = select
+                    .selectAll("#options")
+                    .data(generated)
+                    .enter()
+                    .append("option")
+                    .text(function(d) {
+                      return d;
+                    });
+
+                  function onchange() {
+                    selectValue = d3.select("select").property("value");
+                    newChart(selectValue);
+                  }
+                </script>
+              </div>
+              <svg id="vis"></svg>
+            </div>
+          </div>
+        </section>
+        <section class="clients section">
+          <div class="container">
+            <div class="clients-inner section-inner has-top-divider">
+              <div class="container-sm">
+                <h2 class="subtitle hero-title is-revealing">Methodology</h2>
+
+                <div class="cap hero-title is-revealing">preprocessing</div>
+                <p class="hero-paragraph is-revealing">
+                  This visualization looks at how common certain words are used
+                  with gendered pronouns such as “he” and “she” in the news.
+                  This was done by looking at 3 billion words and analyzing 300
+                  billion of their usage associations from articles shared
+                  through Google News (found
+                  <a
+                    href="https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit"
+                    target="_blank"
+                  >
+                    here</a
+                  >). These 3 billion words were converted into high-dimensional
+                  vectors based on these associations using Word2Vec, which
+                  allows word associations to be measurable.
+                </p>
+                <div class="cap hero-title is-revealing">visualization</div>
+                <p class="hero-paragraph is-revealing">
+                  To visualize the gender association, the word vectors are
+                  manifold folded into two-dimensional space by a T-SNE
+                  algorithm and projected on a two dimensional line between “he”
+                  and “she” using Pandas. This allows any words to be measured
+                  on a gender spectrum. The selected categories are made by
+                  finding that specific word in high-dimensional space, and
+                  gathering the closest 500 words to it, which are then plotted
+                  on a beeswarm graph in D3.
+                </p>
+                <div class="cap hero-title is-revealing">impact</div>
+                <p class="hero-paragraph is-revealing">
+                  The way this visualization was made sends an equally important
+                  message beyond just gender labels in the news. The process
+                  used here is common as a preprocessing step to text-based
+                  machine learning. Unfortunately, our models have learned to
+                  capture the biases present in the real-life data on which we
+                  train them. When we train our machine learning models on
+                  embeddings like these, a recruiter searching for "programmers"
+                  will leave female resumes at the bottom of the pile. Gender
+                  bias needs to be mitigated in these models or gender biases
+                  will continue to perpetuate.
+                  <br />
+                  <br />
+                </p>
+                <p class="hero-cta is-revealing">
+                  <a
+                    class="button button-secondary button-shadow"
+                    href="https://garrettvercoe.com/inquiry/"
+                    target="_blank"
+                    >Request an additional category</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <<span class="spacer"><p></p></span>>
+      </main>
+    </div>
+
+    <script src="animations.js"></script>
+  </body>
+</html>
